@@ -69,7 +69,7 @@ nav.nav-header a {
 header .container {
 	background: var(--main-bg-color);
 	display: flex;
-	height: 75vh;
+	height: 65vh;
 }
 
 .header-text {
@@ -269,4 +269,131 @@ nav.nav-footer a {
 .about-person p {
 	color: var(--light-gray);
 	font-size: 1.6rem;
+}
+
+/* Breakpoints -------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1400px) {
+	header .container {
+		height: 60vh;
+	}
+}
+
+@media (max-width: 1230px) {
+	.product-box-description h4 {
+		font-size: 1.9rem;
+	}
+
+	.cta {
+		margin: 6% auto;
+	}
+}
+
+@media (max-width: 800px) {
+
+	nav.nav-header a {
+		font-size: 1.7rem;
+	}
+
+	header .container {
+		flex-direction: column-reverse;
+		padding-top: 4%;
+		height: 65vh;
+	}
+
+	header button {
+		width: 25%;
+	}
+
+	.product-description-section .container {
+		justify-content: center;
+	}
+
+	.product-box-description h4 {
+		font-size: 1.8rem;
+	}
+
+	.product-box-description p {
+		font-size: 1.6rem;
+	}
+
+	.product-box i {
+		margin-right: 5%;
+		font-size: 3rem;
+		color: #fff;
+	}
+
+	.cta {
+		flex-basis: 50%;
+		margin: 7% auto 5%;
+	}
+
+	.cta button {
+		width: 35%;
+	}
+
+	nav .container {
+		padding: 4% 0;
+	}
+}
+
+@media (max-width: 500px) {
+	
+	.container {
+		padding: 0;
+	}
+
+	nav .container {
+		flex-direction: column;
+		align-items: center;
+		font-size: 1.8rem;
+		padding: 2% 0;
+	}
+
+	nav.nav-header a  {
+		margin: 10% 0;
+	}
+
+	.nav-logo {
+		margin-bottom: 2%;
+	}
+
+	.nav-links {
+		flex-basis: 60%;
+		display: flex;
+		flex-direction: column;
+		text-align: start;
+	}
+
+	.header-image {
+		align-items: flex-start;
+	}
+
+	.header-image img {
+		border-radius: 0;
+	}
+
+	header button {
+		width: 32%;
+	}
+
+	.product-description-section .container {
+		flex-direction: column;
+	}
+
+	.product-box:first-of-type {
+		margin-top: 14%;
+	}
+
+	.product-box {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		width: 85%;
+		margin: 5% auto;
+	}
+
+	.product-box i {
+		margin-bottom: 3%;
+	}
 }
