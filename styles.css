@@ -135,7 +135,7 @@ header::after {
 	background: var(--slate-gray);
 	display: flex;
 	flex-wrap: wrap;
-	height: 65vh;
+	padding: 1.5% 0;
 }
 
 .product-box {
@@ -167,7 +167,7 @@ header::after {
 }
 
 .cta {
-	margin: 2% auto;
+	margin: 5% auto;
 	flex-basis: 40%;
 	display: flex;
     flex-direction: column;
@@ -234,6 +234,9 @@ nav.nav-footer a {
 
 .about-section p {
 	font-family: var(--sub-font);
+	color: #BFC0C0;
+	font-size: 2rem;
+	line-height: 1.8;
 }
 
 .image-placeholder {
@@ -253,11 +256,17 @@ nav.nav-footer a {
 
 .about-person {
 	flex-basis: 45%;
+	margin-bottom: 5%;
+}
+
+.about-person h4 {
+	font-size: 1.8rem;
+	font-family: var(--main-font);
+	color: #fff;
 	margin-bottom: 2%;
 }
 
-.about-section p {
-	color: #BFC0C0;
-	font-size: 1.8rem;
-	line-height: 1.8;
+.about-person p {
+	color: var(--light-gray);
+	font-size: 1.6rem;
 }
