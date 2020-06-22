@@ -1,6 +1,5 @@
 :root {
 	--main-bg-color: rgb(45,49,66);
-	--main-bg-gradient: linear-gradient(86deg, rgba(45,49,66,1) 0%, rgba(79,93,117,1) 100%);
 	--dark-blue: #2d3142;
 	--light-gray: #bfc0c0;
 	--coral-orange: #ef8354;
@@ -33,17 +32,12 @@ html{
     font-size:62.5%;
 }
 
-* {
-	border: 1px solid #000;
-}
-
 .container {
 	padding: 0 10%;
 }
 
-nav {
+nav.nav-header {
 	background: var(--main-bg-color);
-	background: var(--main-bg-gradient);
 }
 
 nav .container {
@@ -64,19 +58,18 @@ nav .container {
 	text-align: right;
 }
 
-nav a {
+nav.nav-header a {
 	text-decoration: none;
 	color: #fff;
 	font-size: 2rem;
 	font-family: var(--sub-font);
 	margin: 0 2%;
 }
+
 header .container {
 	background: var(--main-bg-color);
-	background: var(--main-bg-gradient);
 	display: flex;
 	height: 75vh;
-	margin-bottom: 4%;
 }
 
 .header-text {
@@ -104,7 +97,7 @@ header h1 {
 header p {
 	font-size: 1.5rem;
 	font-family: var(--sub-font);
-	margin-bottom: 2%;
+	margin-bottom: 4%;
 	color: #bfc0c0;
 	width: 70%;
 }
@@ -112,6 +105,7 @@ header p {
 header button {
 	border: 1px solid var(--coral-orange);
 	border-radius: 50px;
+	font-family: var(--sub-font);
 	background: var(--coral-orange);
 	color: #fff;
 	padding: 2% 4%;
@@ -121,19 +115,29 @@ header button:hover {
 	cursor: pointer;
 }
 
+header::after {
+    content: '';
+    width: 100%;
+    height: 3vh;
+    background: #2d3142;
+    position: absolute;
+    border-bottom-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+
 .product-description-section .container {
-	background: orange;
+	background: var(--slate-gray);
 	display: flex;
 	flex-wrap: wrap;
-	height: 50vh;
+	height: 65vh;
 }
 
 .product-box {
-	background: lightgray;
 	flex-basis: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: 7%;
 }
 
 .product-box img {
@@ -141,17 +145,20 @@ header button:hover {
 }
 
 .product-box-description h4 {
-	font-size: 1.7rem;
+	color: #fff;
+	font-size: 2.4rem;
+	font-family: var(--main-font);
 	margin-bottom: 1%;
 }
 
 .product-box-description p {
-	font-size: 1.4rem;
+	color: var(--light-gray);
+	font-family: var(--sub-font);
+	font-size: 1.6rem;
 }
 
 .cta {
-	background: white;
-	margin: 0 auto;
+	margin: 2% auto;
 	flex-basis: 40%;
 	display: flex;
     flex-direction: column;
@@ -161,11 +168,40 @@ header button:hover {
 }
 
 .cta h4 {
-	font-size: 2rem;
+	color: #fff;
+	font-size: 2.5rem;
+	font-family: var(--main-font);
 	margin-bottom: 1%;
 }
 
 .cta p {
-	font-size: 1.5rem;
-	margin-bottom: 2%;
+	color: var(--light-gray);
+	font-size: 1.8rem;
+	font-family: var(--sub-font);
+	margin-bottom: 4%;
+}
+
+.cta button {
+	border: 1px solid var(--coral-orange);
+	border-radius: 50px;
+	font-family: var(--sub-font);
+	background: var(--coral-orange);
+	color: #fff;
+	padding: 2% 4%;
+}
+
+.cta button:hover {
+	cursor: pointer;
+}
+
+nav.nav-footer  {
+	background: var(--main-bg-color);
+}
+
+nav.nav-footer a {
+	text-decoration: none;
+	color: rgba(250, 250, 250, 0.5);
+	font-size: 2rem;
+	font-family: var(--sub-font);
+	margin: 0 2%;
 }
