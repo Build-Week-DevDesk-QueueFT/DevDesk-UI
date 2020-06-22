@@ -87,6 +87,11 @@ header .container {
 	align-items: center;
 }
 
+.header-image img {
+	border-radius: 4px;
+	width: 100%;
+}
+
 header h1 {
 	font-size: 2.5rem;
 	font-family: var(--main-font);
@@ -99,6 +104,7 @@ header p {
 	font-family: var(--sub-font);
 	margin-bottom: 4%;
 	color: #bfc0c0;
+	line-height: 1.8;
 	width: 70%;
 }
 
@@ -140,8 +146,10 @@ header::after {
 	margin-top: 7%;
 }
 
-.product-box img {
-	margin-right: 2%;
+.product-box i {
+	margin-right: 3%;
+    font-size: 4rem;
+    color: #fff;
 }
 
 .product-box-description h4 {
@@ -171,13 +179,14 @@ header::after {
 	color: #fff;
 	font-size: 2.5rem;
 	font-family: var(--main-font);
-	margin-bottom: 1%;
+	margin-bottom: 2%;
 }
 
 .cta p {
 	color: var(--light-gray);
 	font-size: 1.8rem;
 	font-family: var(--sub-font);
+	line-height: 1.8;
 	margin-bottom: 4%;
 }
 
