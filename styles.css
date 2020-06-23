@@ -32,6 +32,11 @@ html{
     font-size:62.5%;
 }
 
+body {
+	background: var(--main-bg-color);
+	position: relative;
+}
+
 .container {
 	padding: 0 10%;
 }
@@ -40,7 +45,7 @@ nav.nav-header {
 	background: var(--main-bg-color);
 }
 
-nav .container {
+nav.nav-header .container, nav.nav-footer .container {
 	display: flex;
 	justify-content: space-around;
 	font-size: 1.8rem;
@@ -69,6 +74,10 @@ nav.nav-header a {
 nav.nav-header a:hover {
 	color: #EA794D;
 	transition: 200ms;
+}
+
+.nav-button {
+	display: none;
 }
 
 header.main-header .container {
@@ -123,7 +132,7 @@ header.main-header button {
     color: #fff;
     font-size: 1.5rem;
     padding: 2% 4%;
-    width: 25%;
+    min-width: 25%;
 }
 
 header.main-header button:hover {
@@ -214,7 +223,7 @@ header.main-header::after {
     background: var(--coral-orange);
     color: #fff;
     padding: 2.5% 4%;
-    width: 28%;
+    min-width: 28%;
 }
 
 .cta button:hover {
@@ -336,6 +345,102 @@ header.about-header p {
 	margin-right: 5%;
 }
 
+/* ---CONTACT PAGE ----------------------------------------------------------------------------------------------------- */
+
+.contact-body {
+	background: rgb(42, 45, 53);
+}
+
+.contact-image {
+    width: 73%;
+    border: 5px solid white;
+    border-radius: 5px;
+}
+
+.contact-section {
+	margin-top: 5%;
+}
+
+.contact-section h1 {
+	text-align: center;
+	font-size: 3rem;
+	font-family: var(--main-font);
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: 4%;
+}
+
+.contact-container {
+	display: flex;
+}
+
+.contact-container div {
+	flex-basis: 50%;
+	/* border: 2px solid green; */
+	/* background: red; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.contact-form input {
+    border: 2px solid #fff;
+	border-radius: 9px;
+	background: transparent;
+	color: #fff;
+	font-size: 1.5rem;
+	font-family: var(--sub-font);
+    width: 46%;
+    padding: 1.5% 2%;
+    margin-bottom: 2%;
+    /* text-align: center; */
+}
+
+
+.contact-form textarea {
+    border-radius: 10px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: var(--sub-font);
+    width: 48%;
+    height: 200px;
+    margin-bottom: 2%;
+    padding: 1%;
+}
+
+.contact-form button {
+	font-family: var(--sub-font);
+	font-size: 1.5rem;
+	background: var(--coral-orange);
+	color: #fff;
+	width: 50%;
+	border: none;
+	border-radius: 9px;
+	padding: 1.5%;
+}
+
+.contact-form button:hover {
+	background: #ea6023;
+	cursor: pointer;
+}
+
+#contact-footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+} 
+
+
+
 /* Breakpoints -------------------------------------------------------------------------------------------------------- */
 
 @media (max-width: 1400px) {
@@ -367,7 +472,7 @@ header.about-header p {
 	}
 
 	header.main-header button {
-		width: 25%;
+		min-width: 25%;
 	}
 
 	header.main-header p {
@@ -411,16 +516,49 @@ header.about-header p {
 	}
 
 	.cta button {
-		width: 35%;
+		min-width: 35%;
 	}
 
-	nav .container {
+	nav.nav-header .container, nav.nav-footer .container {
 		padding: 4% 0;
 	}
 }
 
 @media (max-width: 500px) {
-	
+
+	.nav-button {
+		display: block;
+	}
+
+	.fa-bars {
+		position: absolute;
+		top: 0.5%;
+		left: 3%;
+	}
+
+	.nav-links {
+		max-height: 1000px;
+		transition: 600ms;
+	}
+
+	.nav-link {
+		transition: 500ms;
+	}
+
+	.shrink {
+		max-height: 0px !important;
+		transition: 500ms;
+	}
+
+	.hidden {
+		opacity: 0;
+		transition: 300ms;
+	}
+
+	.nav-button {
+		text-align: center;
+	}
+
 	.container {
 		padding: 0;
 	}
@@ -430,7 +568,7 @@ header.about-header p {
 		/* height: 57vh; */
 	}
 
-	nav .container {
+	nav.nav-header .container, nav.nav-footer .container {
 		flex-direction: column;
 		align-items: center;
 		font-size: 1.8rem;
@@ -449,7 +587,7 @@ header.about-header p {
 		flex-basis: 60%;
 		display: flex;
 		flex-direction: column;
-		text-align: start;
+		text-align: center;
 	}
 
 	.header-image {
@@ -468,7 +606,7 @@ header.about-header p {
 	}
 
 	header.main-header button {
-		width: 32%;
+		min-width: 32%;
 	}
 
 	.cta {
@@ -510,7 +648,7 @@ header.about-header p {
 
 @media (max-width: 601px) {
 	header.main-header button {
-		width: 26%;
+		min-width: 26%;
 		padding: 2.5%;
 	}
 }
@@ -518,7 +656,21 @@ header.about-header p {
 @media (max-width: 431px) {
 	header.main-header button {
 		padding: 3%;
-		width: 36%;
+		min-width: 36%;
+	}
+}
+
+@media (max-width: 350px) {
+	header.main-header h1 {
+		font-size: 2rem;
+	}
+
+	.cta h4 {
+		font-size: 2rem;
+	}
+
+	.cta p {
+		font-size: 1.6rem;
 	}
 }
 /* -------Breakpoints for About.html ------------------------------------------------------------------------------------------*/
@@ -611,28 +763,3 @@ header.about-header p {
 		margin-right: 13%;
 	}
 }
-
-/* @media (max-width: 800px) {
-	.about-profiles {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		margin-top: 5%;
-	}
-
-	.about-person {
-		margin-bottom: 5%;
-	}
-
-	.about-person:last-of-type {
-		margin-bottom: 8%;
-	}
-
-	.about-section h1 {
-		font-size: 2.3rem;
-	}
-
-	.about-section p {
-		font-size: 1.6rem;
-	}
-} */
