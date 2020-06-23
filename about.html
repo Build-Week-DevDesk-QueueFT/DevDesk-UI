@@ -7,21 +7,25 @@
     <script src="https://kit.fontawesome.com/58ff903b9e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600&family=Nunito&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/about.css">
     <title>About Us</title>
 </head>
 
 <body>
-    <nav id="nav-about" class="nav-header">
+    <nav class="nav-header">
         <div class="container">
             <div class='nav-logo'>
                 <h3>DevDesk</h3>
+                <div class="nav-button">
+                    <i id="nav-image" class="fas fa-bars"></i>
+                </div>
             </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="#">My Account</a>
+            <div id="nav-links" class="nav-links shrink">
+                <a class="nav-link hidden" href="index.html">Home</a>
+                <a class="nav-link hidden" href="about.html">About</a>
+                <a class="nav-link hidden" href="contact.html">Contact Us</a>
+                <a class="nav-link hidden" href="#">My Account</a>
             </div>
         </div>
     </nav>
@@ -39,7 +43,7 @@
         <div class="container">
             <div class="about-profiles">
                 <div class="about-person">
-                    <img src="./images/emily.png" class="image-placeholder">
+                    <img src="./images/emily.png" class="image-placeholder" alt="photo of Emily Gauthier">
                     <h4><span>Emily</span> Gauthier</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestias nemo ratione tempora
                         iste veritatis maxime dignissimos culpa, officiis maiores veniam molestiae! Voluptatem dolore
@@ -50,7 +54,7 @@
                     </div>
                 </div>
                 <div class="about-person">
-                    <img src="./images/david.jpg" class="image-placeholder">
+                    <img src="./images/david.jpg" class="image-placeholder" alt="photo of David Davis">
                     <h4><span>David</span> Davis</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestias nemo ratione tempora
                         iste veritatis maxime dignissimos culpa, officiis maiores veniam molestiae! Voluptatem dolore
@@ -61,7 +65,7 @@
                     </div>
                 </div>
                 <div class="about-person">
-                    <img src="./images/nestor.jpg" class="image-placeholder">
+                    <img src="./images/nestor.jpg" class="image-placeholder" alt="photo of Nestor Cervantes">
                     <h4><span>Nestor</span> Cervantes</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestias nemo ratione tempora
                         iste veritatis maxime dignissimos culpa, officiis maiores veniam molestiae! Voluptatem dolore
@@ -72,7 +76,7 @@
                     </div>
                 </div>
                 <div class="about-person">
-                    <img src="./images/corbin.jpg" class="image-placeholder">
+                    <img src="./images/corbin.jpg" class="image-placeholder" alt="photo of Corbin Robb">
                     <h4><span>Corbin</span> Robb</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestias nemo ratione tempora
                         iste veritatis maxime dignissimos culpa, officiis maiores veniam molestiae! Voluptatem dolore
@@ -101,6 +105,8 @@
             </div>
         </nav>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
