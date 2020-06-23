@@ -66,6 +66,11 @@ nav.nav-header a {
 	margin: 0 2%;
 }
 
+nav.nav-header a:hover {
+	color: #EA794D;
+	transition: 200ms;
+}
+
 header .container {
 	background: var(--main-bg-color);
 	display: flex;
@@ -90,6 +95,7 @@ header .container {
 .header-image img {
 	border-radius: 4px;
 	width: 100%;
+	filter: drop-shadow(0px 2px 7px black);
 }
 
 header h1 {
@@ -105,20 +111,24 @@ header p {
 	margin-bottom: 4%;
 	color: #bfc0c0;
 	line-height: 1.8;
-	width: 70%;
+	width: 85%;
 }
 
 header button {
-	border: 1px solid var(--coral-orange);
-	border-radius: 50px;
-	font-family: var(--sub-font);
+    border: 1px solid var(--coral-orange);
+    border-radius: 50px;
+    font-family: var(--sub-font);
 	background: var(--coral-orange);
-	color: #fff;
-	padding: 2% 4%;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 2% 4%;
+    width: 25%;
 }
 
 header button:hover {
 	cursor: pointer;
+	background: #ea794d;
+	transition: 200ms;
 }
 
 header::after {
@@ -135,7 +145,8 @@ header::after {
 	background: var(--slate-gray);
 	display: flex;
 	flex-wrap: wrap;
-	padding: 1.5% 0;
+	padding: 1.5% 9%;
+	justify-content: space-between;
 }
 
 .product-box {
@@ -167,7 +178,7 @@ header::after {
 }
 
 .cta {
-	margin: 5% auto;
+	margin: 7% auto;
 	flex-basis: 40%;
 	display: flex;
     flex-direction: column;
@@ -192,16 +203,20 @@ header::after {
 }
 
 .cta button {
-	border: 1px solid var(--coral-orange);
-	border-radius: 50px;
+    border: 1px solid var(--coral-orange);
+    border-radius: 50px;
 	font-family: var(--sub-font);
-	background: var(--coral-orange);
-	color: #fff;
-	padding: 2% 4%;
+	font-size: 1.4rem;
+    background: var(--coral-orange);
+    color: #fff;
+    padding: 2.5% 4%;
+    width: 26%;
 }
 
 .cta button:hover {
 	cursor: pointer;
+	background: #ea794d;
+	transition: 200ms;
 }
 
 nav.nav-footer  {
@@ -226,9 +241,9 @@ nav.nav-footer a {
 }
 
 .about-section h1 {
+	color: #EA794D;
 	font-size: 3rem;
 	font-family: var(--main-font);
-	color: #fff;
 	margin-bottom: 2%;
 }
 
@@ -255,8 +270,13 @@ nav.nav-footer a {
 }
 
 .about-person {
-	flex-basis: 45%;
-	margin-bottom: 5%;
+    flex-basis: 45%;
+    margin-bottom: 5%;
+    padding: 2% 4%;
+}
+
+.about-person span {
+	color: #EA794D;
 }
 
 .about-person h4 {
@@ -269,6 +289,27 @@ nav.nav-footer a {
 .about-person p {
 	color: var(--light-gray);
 	font-size: 1.6rem;
+}
+
+.about-social i {
+	font-size: 2.2rem;
+}
+
+.about-social i:hover {
+	cursor: pointer;
+	color: var(--coral-orange)
+}
+
+.fa-github-alt {
+	color: #000;
+}
+
+.fa-twitter {
+	color: #4ca5dd;
+}
+
+.about-social i:first-child {
+	margin-right: 5%;
 }
 
 /* Breakpoints -------------------------------------------------------------------------------------------------------- */
@@ -298,15 +339,19 @@ nav.nav-footer a {
 	header .container {
 		flex-direction: column-reverse;
 		padding-top: 4%;
-		height: 65vh;
+		height: 75vh;
 	}
 
 	header button {
 		width: 25%;
 	}
 
+	header p {
+		width: 90%;
+	}
+
 	.product-description-section .container {
-		justify-content: center;
+		justify-content: space-between;
 	}
 
 	.product-box-description h4 {
@@ -317,15 +362,22 @@ nav.nav-footer a {
 		font-size: 1.6rem;
 	}
 
+	.product-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 7%;
+		margin-right: 2.5%;
+		text-align: center;
+	}
+
 	.product-box i {
-		margin-right: 5%;
-		font-size: 3rem;
-		color: #fff;
+		margin-bottom: 5%;
 	}
 
 	.cta {
-		flex-basis: 50%;
-		margin: 7% auto 5%;
+		flex-basis: 65%;
+		margin: 9% auto 5%;
 	}
 
 	.cta button {
@@ -341,6 +393,11 @@ nav.nav-footer a {
 	
 	.container {
 		padding: 0;
+	}
+
+	header .container {
+		justify-content: flex-end;
+		height: 57vh;
 	}
 
 	nav .container {
@@ -367,10 +424,17 @@ nav.nav-footer a {
 
 	.header-image {
 		align-items: flex-start;
+		flex-basis: 40%;
 	}
 
 	.header-image img {
 		border-radius: 0;
+		width: 90%;
+	}
+
+	.header-text {
+		justify-content: center;
+		margin-top: 2%;
 	}
 
 	header button {
@@ -379,6 +443,11 @@ nav.nav-footer a {
 
 	.product-description-section .container {
 		flex-direction: column;
+		padding-bottom: 7%;
+	}
+
+	.product-box-description h4 {
+		margin-bottom: 3%;
 	}
 
 	.product-box:first-of-type {
@@ -386,14 +455,129 @@ nav.nav-footer a {
 	}
 
 	.product-box {
+		border-radius: 5px;
 		display: flex;
 		flex-direction: column;
 		text-align: center;
 		width: 85%;
 		margin: 5% auto;
+		background: #566580;
+		padding: 3% 7%;
 	}
 
 	.product-box i {
 		margin-bottom: 3%;
 	}
+
+	#nav-footer-container {
+		padding-top: 5%;
+	}
 }
+
+/* -------Breakpoints for About.html ------------------------------------------------------------------------------------------*/
+
+@media (max-width: 800px) {
+
+	.container {
+		padding: 0 4%;
+	}
+
+	.about-profiles {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin-top: 5%;
+	}
+
+	.about-person {
+		margin-bottom: 5%;
+	}
+
+	.about-person:nth-child(odd) {
+		background: #3c4b65;
+		margin-bottom: 0;
+	}
+
+	.about-person:last-of-type {
+		margin-bottom: 8%;
+	}
+
+	.about-section h1 {
+		font-size: 2.3rem;
+	}
+
+	.about-section p {
+		font-size: 1.6rem;
+	}
+
+	.about-social {
+		margin-top: 4%;
+	}
+
+	.about-social i {
+		font-size: 2.5rem;
+	}
+
+	.about-social a:first-of-type {
+		margin-right: 5%;
+	}
+}
+
+@media (max-width: 500px) {
+	.container {
+		padding: 0;
+	}
+
+	.about-bio {
+		margin-bottom: 8%;
+	}
+
+	.about-section h1 {
+		margin-top: 5%;
+	}
+	
+	.product-description-section .container {
+		padding: 1.5% 0;
+	}
+
+	.cta {
+		margin-bottom: 8%;
+	}
+
+	.about-social {
+		margin-top: 4%;
+	}
+
+	.about-social i {
+		font-size: 2.8rem;
+	}
+
+	.about-social a:first-of-type {
+		margin-right: 13%;
+	}
+}
+
+/* @media (max-width: 800px) {
+	.about-profiles {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin-top: 5%;
+	}
+
+	.about-person {
+		margin-bottom: 5%;
+	}
+
+	.about-person:last-of-type {
+		margin-bottom: 8%;
+	}
+
+	.about-section h1 {
+		font-size: 2.3rem;
+	}
+
+	.about-section p {
+		font-size: 1.6rem;
+	}
+} */
