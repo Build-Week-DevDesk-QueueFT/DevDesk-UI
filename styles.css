@@ -71,10 +71,11 @@ nav.nav-header a:hover {
 	transition: 200ms;
 }
 
-header .container {
+header.main-header .container {
 	background: var(--main-bg-color);
 	display: flex;
-	height: 65vh;
+	/* height: 65vh; */
+	padding: 5% 10%;
 }
 
 .header-text {
@@ -98,14 +99,14 @@ header .container {
 	filter: drop-shadow(0px 2px 7px black);
 }
 
-header h1 {
+header.main-header h1 {
 	font-size: 2.5rem;
 	font-family: var(--main-font);
 	color: #fff;
 	margin-bottom: 2%;
 }
 
-header p {
+header.main-header p {
 	font-size: 1.5rem;
 	font-family: var(--sub-font);
 	margin-bottom: 4%;
@@ -114,7 +115,7 @@ header p {
 	width: 85%;
 }
 
-header button {
+header.main-header button {
     border: 1px solid var(--coral-orange);
     border-radius: 50px;
     font-family: var(--sub-font);
@@ -125,13 +126,13 @@ header button {
     width: 25%;
 }
 
-header button:hover {
+header.main-header button:hover {
 	cursor: pointer;
 	background: #ea794d;
 	transition: 200ms;
 }
 
-header::after {
+header.main-header::after {
     content: '';
     width: 100%;
     height: 3vh;
@@ -236,6 +237,26 @@ nav.nav-footer a {
 
 /* About Page------------------------------------------------------------------------------------------------------------------------------------- */
 
+header.about-header {
+    background: #2d3142;
+    padding: 5% 0;
+    text-align: center;
+}
+
+header.about-header h1 {
+    font-size: 3.5rem;
+    font-family: var(--main-font);
+    color: var(--coral-orange);
+    margin-bottom: 1.5%;
+}
+
+header.about-header p {
+    font-size: 1.6rem;
+    font-family: var(--sub-font);
+    color: var(--light-gray);
+    width: 70%;
+    margin: auto;
+}
 
 .about-section {
 	background: var(--slate-gray);
@@ -318,8 +339,8 @@ nav.nav-footer a {
 /* Breakpoints -------------------------------------------------------------------------------------------------------- */
 
 @media (max-width: 1400px) {
-	header .container {
-		height: 60vh;
+	header.main-header .container {
+		/* height: 60vh; */
 	}
 }
 
@@ -339,22 +360,27 @@ nav.nav-footer a {
 		font-size: 1.7rem;
 	}
 
-	header .container {
+	header.main-header .container {
 		flex-direction: column-reverse;
 		padding-top: 4%;
-		height: 75vh;
+		/* height: 75vh; */
 	}
 
-	header button {
+	header.main-header button {
 		width: 25%;
 	}
 
-	header p {
+	header.main-header p {
 		width: 90%;
+	}
+
+	.header-image img {
+		padding-bottom: 5%;
 	}
 
 	.product-description-section .container {
 		justify-content: space-between;
+		padding-top: 5%;
 	}
 
 	.product-box-description h4 {
@@ -399,9 +425,9 @@ nav.nav-footer a {
 		padding: 0;
 	}
 
-	header .container {
+	header.main-header .container {
 		justify-content: flex-end;
-		height: 57vh;
+		/* height: 57vh; */
 	}
 
 	nav .container {
@@ -441,7 +467,7 @@ nav.nav-footer a {
 		margin-top: 2%;
 	}
 
-	header button {
+	header.main-header button {
 		width: 32%;
 	}
 
@@ -482,9 +508,26 @@ nav.nav-footer a {
 	}
 }
 
+@media (max-width: 601px) {
+	header.main-header button {
+		width: 26%;
+		padding: 2.5%;
+	}
+}
+
+@media (max-width: 431px) {
+	header.main-header button {
+		padding: 3%;
+		width: 36%;
+	}
+}
 /* -------Breakpoints for About.html ------------------------------------------------------------------------------------------*/
 
 @media (max-width: 800px) {
+
+	header.about-header {
+		padding: 10% 0;
+	}
 
 	.container {
 		padding: 0 4%;
@@ -532,6 +575,10 @@ nav.nav-footer a {
 }
 
 @media (max-width: 500px) {
+
+	header.about-header h1 {
+		font-size: 2.5rem;
+	}
 	.container {
 		padding: 0;
 	}
