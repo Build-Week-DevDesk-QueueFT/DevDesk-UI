@@ -178,13 +178,16 @@ header::after {
 }
 
 .cta {
-	margin: 7% auto;
-	flex-basis: 40%;
-	display: flex;
+    background: #414d61;
+    border-radius: 5px;
+    padding: 2% 5%;
+    margin: 7% auto;
+    flex-basis: 40%;
+    display: flex;
     flex-direction: column;
     align-items: center;
-	justify-content: center;
-	text-align: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .cta h4 {
@@ -210,7 +213,7 @@ header::after {
     background: var(--coral-orange);
     color: #fff;
     padding: 2.5% 4%;
-    width: 26%;
+    width: 28%;
 }
 
 .cta button:hover {
@@ -376,8 +379,9 @@ nav.nav-footer a {
 	}
 
 	.cta {
-		flex-basis: 65%;
+		flex-basis: 70%;
 		margin: 9% auto 5%;
+		padding: 4% 5%;
 	}
 
 	.cta button {
@@ -439,6 +443,10 @@ nav.nav-footer a {
 
 	header button {
 		width: 32%;
+	}
+
+	.cta {
+		background: transparent;
 	}
 
 	.product-description-section .container {
@@ -535,7 +543,7 @@ nav.nav-footer a {
 	.about-section h1 {
 		margin-top: 5%;
 	}
-	
+
 	.product-description-section .container {
 		padding: 1.5% 0;
 	}
