@@ -1,7 +1,7 @@
 
 header.about-header {
     background: #2d3142;
-    padding: 5% 0;
+    padding: 1.5% 0;
     text-align: center;
 }
 
@@ -71,6 +71,13 @@ header.about-header p {
 	font-size: 1.8rem;
 	font-family: var(--main-font);
 	color: #fff;
+	margin-bottom: 1%;
+}
+
+.team-role {
+	color: white;
+    font-size: 1.3rem;
+	font-family: var(--sub-font);
 	margin-bottom: 2%;
 }
 
@@ -121,6 +128,7 @@ header.about-header p {
 
 	.about-person {
 		margin-bottom: 5%;
+		padding-bottom: 8%;
 	}
 
 	.about-person:nth-child(odd) {

@@ -1,5 +1,5 @@
-.contact-body {
-	background: #F5F5F5;
+section {
+	background: #f8f8ff;
 }
 
 h1 {
@@ -87,7 +87,8 @@ div.box-top p.customer-name {
     align-items: center;
     font-size: 2rem;
     font-family: var(--sub-font);
-    line-height: 1.5;
+	line-height: 1.5;
+	margin-bottom: 5%;
 }
 
 .customer-box img {
@@ -99,6 +100,7 @@ div.box-top p.customer-name {
 .customer-p-main {
 	text-align: center;
 	margin-bottom: 1.5%;
+	width: 100%;
 }
 
 .customer-main-name {
@@ -195,5 +197,9 @@ div.box-top p.customer-name {
 	.customer-p-main {
 		font-size: 1.8rem;
 		margin-bottom: 2%;
+	}
+
+	.testimonial-main .customer-box {
+		margin-bottom: 10%;
 	}
 }
