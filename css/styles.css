@@ -1,0 +1,489 @@
+:root {
+	--main-bg-color: rgb(45,49,66);
+	--dark-blue: #2d3142;
+	--light-gray: #bfc0c0;
+	--coral-orange: #ef8354;
+	--slate-gray: #4f5d75;
+	--main-font: 'Comfortaa', cursive;
+	--sub-font: 'Nunito', sans-serif;
+}
+
+html, body, div, span, applet, object, iframe,  
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
+a, abbr, acronym, address, big, cite, code,  
+del, dfn, em, img, ins, kbd, q, s, samp,  
+small, strike, strong, sub, sup, tt, var,  
+b, u, i, center,  
+dl, dt, dd, ol, ul, li,  
+fieldset, form, label, legend,  
+table, caption, tbody, tfoot, thead, tr, th, td,  
+article, aside, canvas, details, embed,  
+figure, figcaption, footer, header, hgroup,  
+menu, nav, output, ruby, section, summary,  
+time, mark, audio, video {  
+margin: 0;
+box-sizing: border-box;
+padding: 0;  
+font: inherit;  
+vertical-align: baseline;
+}
+/*GENERAL STYLES*/
+html{
+    font-size:62.5%;
+}
+
+body {
+	background: var(--main-bg-color);
+	position: relative;
+}
+
+.container {
+	padding: 0 10%;
+}
+
+nav.nav-header {
+	background: var(--main-bg-color);
+}
+
+nav.nav-header .container, nav.nav-footer .container {
+	display: flex;
+	justify-content: space-around;
+	font-size: 1.8rem;
+	padding: 2% 0;
+}
+
+.nav-logo {
+	font-size: 2.4rem;
+	font-family: var(--main-font);
+	color: #fff;
+}
+
+.nav-links {
+	flex-basis: 60%;
+	text-align: right;
+}
+
+nav.nav-header a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 2rem;
+	font-family: var(--sub-font);
+	margin: 0 2%;
+}
+
+nav.nav-header a:hover {
+	color: #EA794D;
+	transition: 200ms;
+}
+
+.nav-button {
+	display: none;
+}
+
+header.main-header .container {
+	background: var(--main-bg-color);
+	display: flex;
+	/* height: 65vh; */
+	padding: 5% 10%;
+}
+
+.header-text {
+	flex-basis: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-image {
+	flex-basis: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-image img {
+	border-radius: 4px;
+	width: 100%;
+	filter: drop-shadow(0px 2px 7px black);
+}
+
+header.main-header h1 {
+	font-size: 2.5rem;
+	font-family: var(--main-font);
+	color: #fff;
+	margin-bottom: 2%;
+}
+
+header.main-header p {
+	font-size: 1.5rem;
+	font-family: var(--sub-font);
+	margin-bottom: 4%;
+	color: #bfc0c0;
+	line-height: 1.8;
+	width: 85%;
+}
+
+header.main-header button {
+    border: 1px solid var(--coral-orange);
+    border-radius: 50px;
+    font-family: var(--sub-font);
+	background: var(--coral-orange);
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 2% 4%;
+    min-width: 25%;
+}
+
+header.main-header button:hover {
+	cursor: pointer;
+	background: #ea794d;
+	transition: 200ms;
+}
+
+header.main-header::after {
+    content: '';
+    width: 100%;
+    height: 3vh;
+    background: #2d3142;
+    position: absolute;
+    border-bottom-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+
+.product-description-section .container {
+	background: var(--slate-gray);
+	display: flex;
+	flex-wrap: wrap;
+	padding: 1.5% 9%;
+	justify-content: space-between;
+}
+
+.product-box {
+	flex-basis: 45%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 7%;
+	margin-right: 2.5%;
+}
+
+.product-box i {
+	margin-right: 3%;
+    font-size: 4rem;
+    color: #fff;
+}
+
+.product-box-description h4 {
+	color: #fff;
+	font-size: 2.4rem;
+	font-family: var(--main-font);
+	margin-bottom: 1%;
+}
+
+.product-box-description p {
+	color: var(--light-gray);
+	font-family: var(--sub-font);
+	font-size: 1.6rem;
+}
+
+.cta {
+    background: #414d61;
+    border-radius: 5px;
+    padding: 2% 5%;
+    margin: 7% auto;
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cta h4 {
+	color: #fff;
+	font-size: 2.5rem;
+	font-family: var(--main-font);
+	margin-bottom: 2%;
+}
+
+.cta p {
+	color: var(--light-gray);
+	font-size: 1.8rem;
+	font-family: var(--sub-font);
+	line-height: 1.8;
+	margin-bottom: 4%;
+}
+
+.cta button {
+    border: 1px solid var(--coral-orange);
+    border-radius: 50px;
+	font-family: var(--sub-font);
+	font-size: 1.4rem;
+    background: var(--coral-orange);
+    color: #fff;
+    padding: 2.5% 4%;
+    min-width: 28%;
+}
+
+.cta button:hover {
+	cursor: pointer;
+	background: #ea794d;
+	transition: 200ms;
+}
+
+nav.nav-footer  {
+	background: var(--main-bg-color);
+}
+
+nav.nav-footer a {
+	text-decoration: none;
+	color: rgba(250, 250, 250, 0.5);
+	font-size: 2rem;
+	font-family: var(--sub-font);
+	margin: 0 2%;
+}
+
+/* About Page------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* ---CONTACT PAGE ----------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* Breakpoints -------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1400px) {
+	header.main-header .container {
+		/* height: 60vh; */
+	}
+}
+
+@media (max-width: 1230px) {
+	.product-box-description h4 {
+		font-size: 1.9rem;
+	}
+
+	.cta {
+		margin: 6% auto;
+	}
+}
+
+@media (max-width: 800px) {
+
+	nav.nav-header a {
+		font-size: 1.7rem;
+	}
+
+	header.main-header .container {
+		flex-direction: column-reverse;
+		padding-top: 4%;
+		/* height: 75vh; */
+	}
+
+	header.main-header button {
+		min-width: 25%;
+	}
+
+	header.main-header p {
+		width: 90%;
+	}
+
+	.header-image img {
+		padding-bottom: 5%;
+	}
+
+	.product-description-section .container {
+		justify-content: space-between;
+		padding-top: 5%;
+	}
+
+	.product-box-description h4 {
+		font-size: 1.8rem;
+	}
+
+	.product-box-description p {
+		font-size: 1.6rem;
+	}
+
+	.product-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 7%;
+		margin-right: 2.5%;
+		text-align: center;
+	}
+
+	.product-box i {
+		margin-bottom: 5%;
+	}
+
+	.cta {
+		flex-basis: 70%;
+		margin: 9% auto 5%;
+		padding: 4% 5%;
+	}
+
+	.cta button {
+		min-width: 35%;
+	}
+
+	nav.nav-header .container, nav.nav-footer .container {
+		padding: 4% 0;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.nav-button {
+		display: block;
+	}
+
+	.fa-bars {
+		position: absolute;
+		top: 0.5%;
+		left: 3%;
+	}
+
+	.nav-links {
+		max-height: 1000px;
+		transition: 600ms;
+	}
+
+	.nav-link {
+		transition: 500ms;
+	}
+
+	.shrink {
+		max-height: 0px !important;
+		transition: 500ms;
+	}
+
+	.hidden {
+		opacity: 0;
+		transition: 300ms;
+	}
+
+	.nav-button {
+		text-align: center;
+	}
+
+	.container {
+		padding: 0;
+	}
+
+	header.main-header .container {
+		justify-content: flex-end;
+		/* height: 57vh; */
+	}
+
+	nav.nav-header .container, nav.nav-footer .container {
+		flex-direction: column;
+		align-items: center;
+		font-size: 1.8rem;
+		padding: 2% 0;
+	}
+
+	nav.nav-header a  {
+		margin: 10% 0;
+	}
+
+	.nav-logo {
+		margin-bottom: 2%;
+	}
+
+	.nav-links {
+		flex-basis: 60%;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.header-image {
+		align-items: flex-start;
+		flex-basis: 40%;
+	}
+
+	.header-image img {
+		border-radius: 0;
+		width: 90%;
+	}
+
+	.header-text {
+		justify-content: center;
+		margin-top: 2%;
+	}
+
+	header.main-header button {
+		min-width: 32%;
+	}
+
+	.cta {
+		background: transparent;
+	}
+
+	.product-description-section .container {
+		flex-direction: column;
+		padding-bottom: 7%;
+	}
+
+	.product-box-description h4 {
+		margin-bottom: 3%;
+	}
+
+	.product-box:first-of-type {
+		margin-top: 14%;
+	}
+
+	.product-box {
+		border-radius: 5px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		width: 85%;
+		margin: 5% auto;
+		background: #566580;
+		padding: 3% 7%;
+	}
+
+	.product-box i {
+		margin-bottom: 3%;
+	}
+
+	#nav-footer-container {
+		padding-top: 5%;
+	}
+}
+
+@media (max-width: 601px) {
+	header.main-header button {
+		min-width: 26%;
+		padding: 2.5%;
+	}
+}
+
+@media (max-width: 431px) {
+	header.main-header button {
+		padding: 3%;
+		min-width: 36%;
+	}
+}
+
+@media (max-width: 350px) {
+	header.main-header h1 {
+		font-size: 2rem;
+	}
+
+	.cta h4 {
+		font-size: 2rem;
+	}
+
+	.cta p {
+		font-size: 1.6rem;
+	}
+}
+
+
