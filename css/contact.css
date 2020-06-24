@@ -1,3 +1,7 @@
+.contact-body {
+	background: #F5F5F5;
+}
+
 h1 {
     font-size: 3rem;
     font-family: var(--main-font);
@@ -120,159 +124,76 @@ div.box-top p.customer-name {
 	font-size: 2.5rem;
 }
 
-
-
-
-
-/* ***************************************************************************************************************************************************************** */
-.contact-body {
-	background: #F5F5F5;
-}
-
-.contact-image {
-    width: 73%;
-    border: 5px solid white;
-    border-radius: 5px;
-}
-
-.contact-section {
-	margin-top: 5%;
-}
-
-.contact-section h1 {
-	text-align: center;
-	font-size: 3rem;
-	font-family: var(--main-font);
-	font-weight: 700;
-	color: #fff;
-	margin-bottom: 4%;
-}
-
-.contact-container {
-	display: flex;
-}
-
-.contact-container div {
-	flex-basis: 50%;
-	/* border: 2px solid green; */
-	/* background: red; */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.contact-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-}
-
-.contact-form input {
-    border: 2px solid #fff;
-	border-radius: 9px;
-	background: transparent;
-	color: #fff;
-	font-size: 1.5rem;
-	font-family: var(--sub-font);
-    width: 46%;
-    padding: 1.5% 2%;
-    margin-bottom: 2%;
-    /* text-align: center; */
-}
-
-
-.contact-form textarea {
-    border-radius: 10px;
-    border: 2px solid #fff;
-    background: transparent;
-    color: #fff;
-    font-size: 1.6rem;
-    font-family: var(--sub-font);
-    width: 48%;
-    height: 200px;
-    margin-bottom: 2%;
-    padding: 1%;
-}
-
-.contact-form button {
-	font-family: var(--sub-font);
-	font-size: 1.5rem;
-	background: var(--coral-orange);
-	color: #fff;
-	width: 50%;
-	border: none;
-	border-radius: 9px;
-	padding: 1.5%;
-}
-
-.contact-form button:hover {
-	background: #ea6023;
-	cursor: pointer;
-}
-/* ----------breakpoints for CONTACT------------------------------------------------------------------------------------------- */
+/* ----------breakpoints for Testimonials------------------------------------------------------------------------------------------- */
 
 @media (max-width: 800px) {
-	.contact-container {
-		flex-direction: column;
-	}
 
-	.contact-section {
+	section {
 		margin-bottom: 5%;
 	}
 
-	.contact-image {
-		width: 50%;
-		margin-bottom: 4%;
+	h1 {
+		margin: 3% auto;
 	}
 
-	#contact-footer {
-		position: static;
+	.testimonial-container-top .customer-box {
+		flex-basis: 44%;
+		padding: 2% 2.5%;
 	}
 
-	@media (max-width: 500px) {
+	.testimonial-container-top, .testimonial-container-bottom  {
+		flex-wrap: wrap;
+	}
 
-		.contact-image {
-			display: none;
-		}
+	.testimonial-container-bottom .customer-box {
+		flex-basis: 44%;
+	}
 
-		.contact-section {
-			margin-top: 20%;
-		}
+	.last-customer {
+		margin-top: 5%;
+	}
 
-		.contact-section h1 {
-			margin-bottom: 8%;
-		}
+	.customer-box img {
+		width: 20%;
+	}
 
-		.contact-form input {
-			border: 2px solid #fff;
-			border-radius: 9px;
-			background: transparent;
-			color: #fff;
-			font-size: 1.5rem;
-			font-family: var(--sub-font);
-			width: 65%;
-			padding: 1.5% 2%;
-			margin-bottom: 5%;
-			/* text-align: center; */
-		}
+	.testimonial-main .customer-box i.fa-quote-right, .testimonial-main .customer-box i.fa-quote-left  {
+		font-size: 2.6rem;
+	}
 
-		.contact-form textarea {
-			border-radius: 10px;
-			border: 2px solid #fff;
-			background: transparent;
-			color: #fff;
-			font-size: 1.6rem;
-			font-family: var(--sub-font);
-			width: 67%;
-			height: 200px;
-			margin-bottom: 5%;
-			padding: 1%;
-		}
+	#customer-img-main {
+		width: 12%;
+	}
+}
 
-		#contact-footer {
-			position: fixed;
-			bottom: 0;
-		}
+@media (max-width: 500px) {
+	.testimonial-container-top, .testimonial-container-bottom {
+		flex-direction: column;
+    	width: 100%;
+    	margin: auto;
+	}
+
+	.testimonial-container-top .customer-box, .testimonial-container-bottom .customer-box {
+		margin-bottom: 5%;
+		width: 85%;
+    	margin: 2.5% auto;
+    	padding: 3% 5%;
+	}
+
+	.customer-box img {
+		width: 15%;
+	}
+
+	.last-customer {
+		margin-top: 0;
+	}
+
+	#customer-img-main {
+		width: 15%;
+	}
+
+	.customer-p-main {
+		font-size: 1.8rem;
+		margin-bottom: 2%;
 	}
 }
