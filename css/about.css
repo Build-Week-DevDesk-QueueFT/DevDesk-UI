@@ -56,9 +56,11 @@ header.about-header p {
 }
 
 .about-person {
+	border-radius: 5px;
     flex-basis: 45%;
     margin-bottom: 5%;
-    padding: 2% 4%;
+	padding: 2% 4%;
+	background: rgb(86, 101, 128);
 }
 
 .about-person span {
@@ -123,6 +125,11 @@ header.about-header p {
 
 	.about-person:nth-child(odd) {
 		background: #3c4b65;
+		margin-bottom: 0;
+	}
+
+	.about-person:nth-child(even) {
+		background: transparent;
 		margin-bottom: 0;
 	}
 
