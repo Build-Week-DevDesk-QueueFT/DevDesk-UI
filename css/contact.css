@@ -20,20 +20,21 @@ h1 {
 
 .testimonial-container-top .customer-box {
 	border: none;
-	border-radius: 5px;
+	border-radius: 7px;
 	flex-basis: 35%;
 	padding: 1%;
 }
 
-.testimonial-container-top .customer-box p {
+.testimonial-container-top .customer-box p, .testimonial-container-bottom .customer-box p {
 	font-size: 1.5rem;
 	font-family: var(--sub-font);
 	color: #000;
+	line-height: 1.5;
 }
 
 .testimonial-container-bottom .customer-box {
 	border: none;
-	border-radius: 5px;
+	border-radius: 7px;
 	flex-basis: 30%;
 	padding: 1%;
 }
@@ -43,19 +44,29 @@ h1 {
 }
 
 .testimonial-main {
-	border: 2px solid orange;
 	padding: 1%;
+	margin: 4% auto;
 }
 
 .testimonial-main .customer-box {
-	display: flex;
-	flex-direction: column-reverse;
-	align-items: center;
+	box-shadow: none;
+	background: transparent;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-size: 2rem;
+    font-family: var(--sub-font);
+    line-height: 1.5;
 }
 
 .customer-box img {
 	width: 15%;
 	border-radius: 50px;
+	margin-bottom: 2%;
+}
+
+.customer-p-main {
+	text-align: center;
 }
 
 #customer-img-main {
@@ -68,7 +79,7 @@ h1 {
 
 /* ***************************************************************************************************************************************************************** */
 .contact-body {
-	background: ghostwhite;
+	background: #F5F5F5;
 }
 
 .contact-image {
@@ -152,13 +163,6 @@ h1 {
 	background: #ea6023;
 	cursor: pointer;
 }
-
-#contact-footer {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-} 
-
 /* ----------breakpoints for CONTACT------------------------------------------------------------------------------------------- */
 
 @media (max-width: 800px) {
